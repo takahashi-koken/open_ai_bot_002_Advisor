@@ -42,6 +42,7 @@ def communicate():
     st.session_state["user_input"] = ""  # 入力欄を消去
 
 
+
 # ユーザーインターフェイスの構築
 st.title("悩み相談のチャットボット")
 st.image("25_Advisor.png")
@@ -59,3 +60,9 @@ if st.session_state["messages"]:
             speaker="🤖"
 
         st.write(speaker + ": " + message["content"])
+
+
+
+# テキスト入力欄の高さを設定
+height = len(user_input) * 20
+st.write(f'<style>div.row-widget.stRadio > div{height}px</style>', unsafe_allow_html=True)
