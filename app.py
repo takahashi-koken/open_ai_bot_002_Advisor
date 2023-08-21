@@ -51,7 +51,7 @@ st.title("お悩みの解決をサポートします")
 #見出し
 lines = [
     "①新しい相談は[F5]押下等でリロードしてください     ",
-    "②入力後は [Ctrl]＋[Shift] で実行します"
+    "②入力後は [Ctrl]＋[Enter] で実行します"
 ]
 text = "\n".join(lines)
 st.write(text)
@@ -84,7 +84,7 @@ lines = [
 text = "\n".join(lines)
 st.write(text)
 
-user_input = st.text_area("メッセージを入力してください。", key="user_input" , on_change=communicate)
+user_input = st.text_area("メッセージを入力してください。入力後は [Ctrl]＋[Enter] ", key="user_input" , on_change=communicate)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
